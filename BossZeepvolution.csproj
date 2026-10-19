@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>BossZeepvolution</AssemblyName>
+    <RootNamespace>BossZeepvolution</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- Copia estas DLL desde la carpeta de tu servidor TShock a ./libs -->
+  <ItemGroup>
+    <Reference Include="TShockAPI"><HintPath>libs/TShockAPI.dll</HintPath></Reference>
+    <Reference Include="OTAPI"><HintPath>libs/OTAPI.dll</HintPath></Reference>
+    <Reference Include="TerrariaServer" Condition="Exists('libs/TerrariaServer.dll')"><HintPath>libs/TerrariaServer.dll</HintPath></Reference>
+    <Reference Include="FNA" Condition="Exists('libs/FNA.dll')"><HintPath>libs/FNA.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>libs/Newtonsoft.Json.dll</HintPath></Reference>
+  </ItemGroup>
+
+</Project>
